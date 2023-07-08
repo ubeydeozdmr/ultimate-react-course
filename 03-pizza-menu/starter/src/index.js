@@ -63,9 +63,7 @@ function Header() {
 
   return (
     <header className='header'>
-      <h1 style={style} className='header'>
-        Fast React Pizza Co.
-      </h1>
+      <h1 style={style}>Fast React Pizza Co.</h1>
     </header>
   );
 }
@@ -113,6 +111,8 @@ function Menu() {
 }
 
 function Pizza({ pizzaObj }) {
+  console.log(pizzaObj);
+
   // if (pizzaObj.soldOut) return null;
 
   return (
@@ -157,13 +157,15 @@ function Footer() {
       )}
     </footer>
   );
+
+  // return React.createElement("footer", null, "We're currently open!");
 }
 
 function Order({ closeHour, openHour }) {
   return (
     <div className='order'>
       <p>
-        We're open from {openHour}:00 until {closeHour}:00. Come visit us order
+        We're open from {openHour}:00 to {closeHour}:00. Come visit us order
         online.
       </p>
       <button className='btn'>Order</button>
