@@ -24,7 +24,11 @@ export default function App() {
     <div className='app'>
       <div className='sidebar'>
         <FriendsList />
+        <FormAddFriend />
+        <Button>Add friend</Button>
       </div>
+
+      <FormSplitBill />
     </div>
   );
 }
@@ -61,7 +65,50 @@ function Friend({ friend }) {
         <p className=''>You and {friend.name} are even</p>
       )}
 
-      <button className='button'>Select</button>
+      <Button>Select</Button>
     </li>
+  );
+}
+
+function Button({ children }) {
+  return <button className='button'>{children}</button>;
+}
+
+function FormAddFriend() {
+  return (
+    <form className='form-add-friend'>
+      <label htmlFor='name'>👫 Friend name</label>
+      <input type='text' id='name' name='name' />
+
+      <label htmlFor='avatar'>🌄 Image URL</label>
+      <input type='text' id='avatar' name='avatar' />
+
+      <Button>Add</Button>
+    </form>
+  );
+}
+
+function FormSplitBill() {
+  return (
+    <form className='form-split-bill'>
+      <h2>Split a bill with X</h2>
+
+      <label htmlFor='bill'>💰 Bill value</label>
+      <input type='text' id='bill' name='bill' />
+
+      <label htmlFor='your'>🧍‍♀️ Your expense</label>
+      <input type='text' id='your' name='your' />
+
+      <label htmlFor='friend'>👫 X's expense</label>
+      <input type='text' id='friend' name='friend' disabled />
+
+      <label htmlFor='total'>🤑 Who is paying the bill</label>
+      <select id='total' name='total'>
+        <option value='user'>You</option>
+        <option value='friend'>X</option>
+      </select>
+
+      <Button>Split bill</Button>
+    </form>
   );
 }
