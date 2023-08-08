@@ -35,42 +35,6 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
-    },
-    {
-      "cityName": "Fes",
-      "country": "Morocco",
-      "emoji": "🇲🇦",
-      "date": "2023-08-08T17:12:27.401Z",
-      "notes": "Yay!",
-      "position": {
-        "lat": "33.999024918333184",
-        "lng": "-5.0222005200065665"
-      },
-      "id": 98443198
-    },
-    {
-      "cityName": "Faro",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2023-08-08T17:16:19.034Z",
-      "notes": "Hot!",
-      "position": {
-        "lat": "37.012494465233274",
-        "lng": "-7.945797234442853"
-      },
-      "id": 98443199
-    },
-    {
-      "cityName": "Istanbul",
-      "country": "Turkiye",
-      "emoji": "🇹🇷",
-      "date": "2023-08-08T17:19:16.092Z",
-      "notes": "That's where I live",
-      "position": {
-        "lat": "41.01622489766711",
-        "lng": "28.98583501959623"
-      },
-      "id": 98443200
     }
   ]
 }
