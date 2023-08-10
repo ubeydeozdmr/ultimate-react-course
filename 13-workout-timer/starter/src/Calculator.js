@@ -9,15 +9,6 @@ function Calculator({ workouts, allowSound }) {
 
   const [duration, setDuration] = useState(0);
 
-  // const playSound = useCallback(
-  //   function () {
-  //     if (!allowSound) return;
-  //     const sound = new Audio(clickSound);
-  //     sound.play();
-  //   },
-  //   [allowSound],
-  // );
-
   useEffect(
     function () {
       setDuration((number * sets * speed) / 60 + (sets - 1) * durationBreak);
@@ -36,6 +27,14 @@ function Calculator({ workouts, allowSound }) {
       playSound();
     },
     [duration, allowSound],
+  );
+
+  useEffect(
+    function () {
+      console.log(duration, sets);
+      document.title = `Your ${number}-exercise workout`;
+    },
+    [number, duration, sets],
   );
 
   // const duration = (number * sets * speed) / 60 + (sets - 1) * durationBreak;
