@@ -25,7 +25,7 @@ function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
   // num checked in nights / all available nights (num days * num cabins)
 
   return (
-    <div>
+    <>
       <Stat
         title='Bookings'
         color='blue'
@@ -50,7 +50,7 @@ function Stats({ bookings, confirmedStays, numDays, cabinCount }) {
         icon={<HiOutlineChartBar />}
         value={Math.round(occupation * 100) + '%'}
       />
-    </div>
+    </>
   );
 }
 
